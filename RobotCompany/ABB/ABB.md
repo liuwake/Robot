@@ -23,4 +23,5 @@
 
 ### [SDK](http://developercenter.robotstudio.com/landing)
 
+### [ABB Robotics User Forum](https://forums.robotstudio.com/)
 
