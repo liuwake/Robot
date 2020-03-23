@@ -1,10 +1,16 @@
 # Robot
  Robot
-## RobotCompany
+## Intro
 
+## RobotCompany
+- [A robot is a machine—especially one programmable by a computer— capable of carrying out a complex series of actions automatically.[2] Robots can be guided by an external control device or the control may be embedded within. Robots may be constructed on the lines of human form, but most robots are machines designed to perform a task with no regard to their aesthetics.](https://en.wikipedia.org/wiki/Robot)
+- 
 ### [ABB]
 ### [Yamaha]
 ### [Yaskawa]
+### [Taikai]
+- 寻求机器人本体和机器人算法ROS等方面合作
+
 
 ##
 ### Zhihu
