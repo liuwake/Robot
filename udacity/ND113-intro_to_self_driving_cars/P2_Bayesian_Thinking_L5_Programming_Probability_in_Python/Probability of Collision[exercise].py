@@ -14,11 +14,13 @@ def probability_of_collision(car_1, car_2):
 
     if car_1 == "L":
     # TODO your code here for when car 1 turns left
+        pass
     elif car_1 == "S":
     # TODO your code here for when car 1 goes straight
+        pass
     else:
     # TODO your code here for when car 1 turns right
-
+        pass
     return probability
 
 
