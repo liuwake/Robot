@@ -147,11 +147,29 @@ class matrix:
 
 def kalman_filter(x, P):
     for n in range(len(measurements)):
+
+        # state var
+        z = matrix([[measurements[n]]])
+
         # measurement update
-        pass
+        y = z - H * x
+        S = H * P * H.transpose() + R
+        K = P * H.transpose() * S.inverse()
+
+        x = x + (K * y)
+        P = (I - K * H) * P
 
         # prediction
-        pass
+        x = F * x + u
+        P = F * P * F.transpose()
+
+
+
+        # print
+        print(f"round {n}'s x:")
+        print(x)
+        print("P:")
+        print(P)
 
     return x, P
 
@@ -162,13 +180,13 @@ def kalman_filter(x, P):
 
 measurements = [1, 2, 3]
 
-x = matrix([[0.], [0.]])  # initial state (location and velocity)
-P = matrix([[1000., 0.], [0., 1000.]])  # initial uncertainty
-u = matrix([[0.], [0.]])  # external motion
-F = matrix([[1., 1.], [0, 1.]])  # next state function
-H = matrix([[1., 0.]])  # measurement function
-R = matrix([[1.]])  # measurement uncertainty
-I = matrix([[1., 0.], [0., 1.]])  # identity matrix
+x = matrix([[0.], [0.]])                # 2X1 initial state (location and velocity)
+P = matrix([[1000., 0.], [0., 1000.]])  # 2X2 initial uncertainty
+u = matrix([[0.], [0.]])                # 2X1 external motion
+F = matrix([[1., 1.], [0, 1.]])         # 2X2 next state function
+H = matrix([[1., 0.]])                  # 1X2 measurement function
+R = matrix([[1.]])                      # 1X1 measurement uncertainty
+I = matrix([[1., 0.], [0., 1.]])        # 2X2 identity matrix
 
 print(kalman_filter(x, P))
 # output should be:
